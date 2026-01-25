@@ -15,7 +15,6 @@ apt dist-upgrade
 reboot
 ```
 
-
 ## Proxmox update Gotchas
 
 - **BACKUP YOUR VMS/CONTAINERS FIRST**
@@ -23,14 +22,17 @@ reboot
 - **PBS running backups?** Stop them first or risk corruption
 - **Mixed repos?** Script will warn - fix enterprise vs no-subscription conflicts
 - **Config file prompts?** Choose "Keep Current Version" for Proxmox configs
-- **Test first** if you have a non-production system
+- **Enterprise repo enabled?** Script removes it (causes 401 errors without subscription)
 
 ## What It Does
 
 1. Runs pre-flight checks (pve8to9)
 2. Backs up your APT sources to `/root/apt_backup_*`
 3. Updates all repos from bookworm→trixie
-4. Tells you what to do next
+4. Configures no-subscription repos
+5. Tells you what to do next
+
+> Does NOT auto-run `apt dist-upgrade` (you do this manually)
 
 ## If Something Breaks
 
