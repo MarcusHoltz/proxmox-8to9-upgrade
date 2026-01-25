@@ -1,11 +1,30 @@
 #!/bin/bash
+# ==============================================================================
+#  SCRIPT: add_fail2ban.sh
+#  ____  _   _  ____    _____                     _ _7 "
+#  |  _ \| | | |/ ___|  / ____|                   (_) | "
+#  | |_) | | | | |     | (___   ___  ___ _   _ _ __| |_ "
+#  |  __/| | | |  _|    \___ \ / _ \/ __| | | | '__| __|"
+#  | |   \ \_/ / |___   ____) |  __/ (__| |_| | |  | |_ "
+#  |_|    \___/|_____| |_____/ \___|\___|\__,_|_|   \__|"
 #
-# Proxmox 9 (Debian 13 Trixie) Security Manager
-# Menu-driven script for SSH hardening and Fail2ban management
+#     :: Proxmox 9 Hardening & Fail2ban Manager ::
+# ===================================================================
+#  DESCRIPTION:
+#    Post-upgrade optional security hardening tool for Proxmox VE.
+#    - Installs and Configures Fail2ban (Systemd backend)
+#    - Hardens SSH Configuration (PermitRoot, PasswordAuth)
+#    - Configures Proxmox Web UI Jail & Filter
+#    - Tweaks Bash History for better auditing
 #
-# Author: Generated for Proxmox 9 / Debian 13
-# Date: January 2026
+#  USAGE:
+#    chmod +x add_fail2ban.sh
+#    ./add_fail2ban.sh
 #
+#  WARNING:
+#    This script is ENFORCING. It will overwrite existing /etc/fail2ban/jail.local
+#    and modify /etc/ssh/sshd_config based on your selections.
+# ==============================================================================
 
 set -e
 
