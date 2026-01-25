@@ -5,10 +5,11 @@ Upgrades Proxmox VE/PBS/PDM from version 8 to 9 (Debian 12→13).
 ## Quick Start
 
 ```bash
-chmod +x upgrade-prep.sh
-./upgrade-prep.sh
+chmod +x proxmox-8to9-upgrade.sh
+./proxmox-8to9-upgrade
 apt update
 apt dist-upgrade
+*answer some questions in terminal*
 reboot
 ```
 
