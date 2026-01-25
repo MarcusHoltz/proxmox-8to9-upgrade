@@ -15,6 +15,15 @@ apt dist-upgrade
 reboot
 ```
 
+## Step 2: Secure It (After Reboot)
+
+Run this additional script if this is a fresh Proxmox install, it will lock down SSH and the Proxmox https port.
+
+```bash
+chmod +x add_fail2ban.sh
+./add_fail2ban.sh
+```
+
 ## Proxmox update Gotchas
 
 - **BACKUP YOUR VMS/CONTAINERS FIRST**
