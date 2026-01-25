@@ -9,9 +9,12 @@ chmod +x proxmox-8to9-upgrade.sh
 ./proxmox-8to9-upgrade
 apt update
 apt dist-upgrade
+```
 *answer some questions in terminal*
+```bash
 reboot
 ```
+
 
 ## Proxmox update Gotchas
 
