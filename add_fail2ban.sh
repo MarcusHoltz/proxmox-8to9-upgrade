@@ -526,7 +526,7 @@ create_monitoring_script() {
 
 echo "========================================="
 echo "Fail2ban Jail Status"
-echo "Date: $(date)"
+#echo "Date: $(date)"
 echo "========================================="
 echo ""
 
@@ -543,10 +543,10 @@ for JAIL in $JAILS; do
     echo ""
 done
 
-echo "========================================="
-echo "Testing Proxmox Filter"
-echo "========================================="
-fail2ban-regex systemd-journal /etc/fail2ban/filter.d/proxmox.conf | head -n 30
+#echo "========================================="
+#echo "Testing Proxmox Filter"
+#echo "========================================="
+#fail2ban-regex systemd-journal /etc/fail2ban/filter.d/proxmox.conf | head -n 30
 SCRIPT
 
     chmod +x /usr/local/bin/fail2ban-monitor.sh
