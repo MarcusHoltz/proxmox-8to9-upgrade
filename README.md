@@ -22,7 +22,7 @@ chmod +x proxmox-8to9-upgrade.sh
 apt update
 apt dist-upgrade
 ```
-*answer some questions in terminal*
+*answer some questions in terminal* **no longer** script runs unattended
 ```bash
 reboot
 ```
